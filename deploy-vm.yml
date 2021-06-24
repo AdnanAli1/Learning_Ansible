@@ -15,10 +15,10 @@
       username: "{{ vcenter_user }}"
       password: "{{ vcenter_pass }}"
       validate_certs: False
-      name: aaub0002
-      template: slub2004-templ
+      name: aacl002
+      template: slce7-tmpl
       datacenter: "{{ datacenter_name }}"
-      folder: /{{ datacenter_name }}/vm
+      folder: Test
       cluster: "{{ cluster_name }}"
       datastore: "datastore-toto-06"
       networks:
