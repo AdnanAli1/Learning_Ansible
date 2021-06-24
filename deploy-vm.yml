@@ -29,7 +29,7 @@
         type: static
         dns_servers: 127.0.0.1
       customization:
-        hostname: "aaub0002"
+        hostname: "aacl002"
         dns_servers:
         - 127.0.0.1
         - 1.1.1.1
