@@ -19,7 +19,7 @@
       datacenter: "{{ datacenter_name }}"
       folder: /{{ datacenter_name }}/vm
       cluster: "{{ cluster_name }}"
-      datastore: "datastore-toto-07"
+      datastore: "datastore-toto-06"
       networks:
       - name: VM Network
         ip: 10.15.50.88
