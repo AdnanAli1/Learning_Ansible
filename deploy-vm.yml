@@ -18,7 +18,7 @@
       name: aacl002-onHost
       template: slce7-tmpl
       #datacenter: "{{ datacenter_name }}"
-      #folder: /{{ datacenter_name }}/VM
+      folder: /
       #cluster: "{{ cluster_name }}"
       datastore: "datastore-toto-07"
       networks:
