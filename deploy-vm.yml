@@ -6,8 +6,8 @@
     vcenter_server: "10.15.50.57"
     vcenter_user: "root"
     vcenter_pass: "glglgl.123"
-    #datacenter_name: "Datacenter"
-    #cluster_name: "Test Cluster"
+    datacenter_name: "Datacenter"
+    cluster_name: "Test Cluster"
   tasks:
   - name: Clone the template
     vmware_guest:
@@ -17,9 +17,9 @@
       validate_certs: False
       name: aacl002-onHost
       template: slce7-tmpl
-      #datacenter: "{{ datacenter_name }}"
-      #folder: /{{ datacenter_name }}/vm
-      #cluster: "{{ cluster_name }}"
+      datacenter: "{{ datacenter_name }}"
+      folder: /{{ datacenter_name }}/vm
+      cluster: "{{ cluster_name }}"
       datastore: "datastore-toto-07"
       networks:
       - name: VM Network
