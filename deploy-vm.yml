@@ -3,22 +3,22 @@
   gather_facts: no
   vars:
     ansible_python_interpreter: /usr/bin/python3.6
-    vcenter_server: "10.15.50.57"
-    vcenter_user: "root"
-    vcenter_pass: "glglgl.123"
+    #vcenter_server: "10.15.50.81"
+    #vcenter_user: "administrator@tpka.local"
+    #vcenter_pass: "Aglglgl.!23"
     #datacenter_name: "Datacenter"
     #cluster_name: "Test Cluster"
   tasks:
   - name: Clone the template
     vmware_guest:
-      hostname: "{{ vcenter_server }}"
-      username: "{{ vcenter_user }}"
-      password: "{{ vcenter_pass }}"
+      hostname: "10.15.50.57"
+      username: "root"
+      password: "glglgl.123"
       validate_certs: False
       name: aacl002-onHost
       template: slce7-tmpl
       #datacenter: "{{ datacenter_name }}"
-      folder: /datastore-toto-07/VM
+      #folder: /{{ datacenter_name }}/VM
       #cluster: "{{ cluster_name }}"
       datastore: "datastore-toto-07"
       networks:
