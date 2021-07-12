@@ -18,7 +18,7 @@
       name: aace002
       template: slce7-tmpl-packer
       datacenter: "{{ datacenter_name }}"
-      folder: /
+      folder: /{{ datacenter_name }}/vm
       cluster: "{{ cluster_name }}"
       datastore: "datastore-toto-08"
       networks:
