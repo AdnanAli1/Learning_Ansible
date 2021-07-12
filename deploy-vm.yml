@@ -2,25 +2,25 @@
 - hosts: localhost
   gather_facts: no
   vars:
-    ansible_python_interpreter: /usr/bin/python3.6
-    #vcenter_server: "10.15.50.81"
-    #vcenter_user: "administrator@tpka.local"
-    #vcenter_pass: "Aglglgl.!23"
-    #datacenter_name: "Datacenter"
-    #cluster_name: "Test Cluster"
+    #ansible_python_interpreter: /usr/bin/python3.6
+    vcenter_server: "10.15.50.81"
+    vcenter_user: "administrator@tpka.local"
+    vcenter_pass: "Aglglgl.!23"
+    datacenter_name: "Datacenter"
+    cluster_name: "Test Cluster"
   tasks:
   - name: Clone the template
     vmware_guest:
-      hostname: "10.15.50.57"
+      hostname: "10.15.50.40"
       username: "root"
       password: "glglgl.123"
       validate_certs: False
-      name: aacl002-onHost
-      template: slce7-tmpl
-      #datacenter: "{{ datacenter_name }}"
+      name: aacl002
+      template: slce7-tmpl-packer
+      datacenter: "{{ datacenter_name }}"
       folder: /
-      #cluster: "{{ cluster_name }}"
-      datastore: "datastore-toto-07"
+      cluster: "{{ cluster_name }}"
+      datastore: "datastore-toto-08"
       networks:
       - name: VM Network
         ip: 10.15.50.88
