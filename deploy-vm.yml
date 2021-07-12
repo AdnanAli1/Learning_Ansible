@@ -2,7 +2,7 @@
 - hosts: localhost
   gather_facts: no
   vars:
-    #ansible_python_interpreter: /usr/bin/python3.6
+    ansible_python_interpreter: /usr/bin/python3.6
     vcenter_server: "10.15.50.81"
     vcenter_user: "administrator@tpka.local"
     vcenter_pass: "Aglglgl.!23"
