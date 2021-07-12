@@ -15,7 +15,7 @@
       username: "root"
       password: "glglgl.123"
       validate_certs: False
-      name: aacl002
+      name: aace002
       template: slce7-tmpl-packer
       datacenter: "{{ datacenter_name }}"
       folder: /
@@ -29,7 +29,7 @@
         type: static
         dns_servers: 127.0.0.1
       customization:
-        hostname: "aacl002_onHost"
+        hostname: "aace002"
         dns_servers:
         - 127.0.0.1
         - 1.1.1.1
