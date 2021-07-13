@@ -16,3 +16,5 @@
      username: '{{ vcenter_user }}'
      password: '{{ vcenter_pass }}'
      cluster_name: '{{ cluster_name }}'
+     register: out
+  - debug: var=out.stdout_lines
