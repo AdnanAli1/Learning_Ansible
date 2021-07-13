@@ -10,7 +10,7 @@
     cluster_name: "Test Cluster"
   tasks:
   - name: Gather DNS facts about all ESXi Hosts in given Cluster
-    vmware_host_dns_facts:
+    vmware_host_dns_info:
     #community.vmware.vmware_host_dns_info:
       validate_certs: False
       hostname: '{{ vcenter_server }}'
