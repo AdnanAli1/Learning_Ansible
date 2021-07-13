@@ -11,7 +11,7 @@
   tasks:
   - name: Gather DNS facts about all ESXi Hosts in given Cluster
     vmware_host_dns_facts:
-     hostname: '{{ vcenter_hostname }}'
-     username: '{{ vcenter_username }}'
-     password: '{{ vcenter_password }}'
-     cluster_name: cluster_name
+     hostname: '{{ vcenter_server }}'
+     username: '{{ vcenter_user }}'
+     password: '{{ vcenter_pass }}'
+     cluster_name: '{{ cluster_name }}'
