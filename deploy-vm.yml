@@ -16,7 +16,7 @@
       password: "glglgl.123"
       validate_certs: False
       name: aace002
-      template: slce7-templ-packer
+      template: slce7-tmpl
       datacenter: "{{ datacenter_name }}"
       folder: /{{ datacenter_name }}/vm
       cluster: "{{ cluster_name }}"
