@@ -10,11 +10,11 @@
     cluster_name: "Test Cluster"
   tasks:
   - name: Gather DNS facts about all ESXi Hosts in given Cluster
-    #vmware_host_dns_facts:
-    community.vmware.vmware_host_dns_info:
-     validate_certs: False
-     hostname: '{{ vcenter_server }}'
-     username: '{{ vcenter_user }}'
-     password: '{{ vcenter_pass }}'
-     cluster_name: '{{ cluster_name }}'
+    vmware_host_dns_facts:
+    #community.vmware.vmware_host_dns_info:
+      validate_certs: False
+      hostname: '{{ vcenter_server }}'
+      username: '{{ vcenter_user }}'
+      password: '{{ vcenter_pass }}'
+      cluster_name: '{{ cluster_name }}'
    delegate_to: localhost
