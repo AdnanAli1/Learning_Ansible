@@ -17,6 +17,5 @@
       username: '{{ vcenter_user }}'
       password: '{{ vcenter_pass }}'
       #cluster_name: Test Cluster
-      #esxi_hostname: 10.15.50.40
-      esxi_hostname: '{{ esxi_hostname }}'
+      esxi_hostname: "10.15.50.40"
     #delegate_to: localhost
