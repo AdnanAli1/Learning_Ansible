@@ -2,7 +2,7 @@
 - hosts: localhost
   gather_facts: no
   vars:
-    ansible_python_interpreter: /usr/bin/python3.6
+    #ansible_python_interpreter: /usr/bin/python3.6
     vcenter_server: "10.15.50.81"
     vcenter_user: "administrator@tpka.local"
     vcenter_pass: "Aglglgl.!23"
@@ -15,21 +15,21 @@
       username: "{{ vcenter_user }}"
       password: "{{ vcenter_pass }}"
       validate_certs: False
-      name: aace002
-      template: slce7-tmpl
+      name: aace003
+      template: slce7-templ-packer
       datacenter: "{{ datacenter_name }}"
       folder: /{{ datacenter_name }}/vm
       cluster: "{{ cluster_name }}"
       datastore: "datastore-toto-08"
       networks:
       - name: VM Network
-        ip: 10.15.50.88
+        ip: 10.15.50.89
         netmask: 255.0.0.0
         gateway: 10.15.50.1
         type: static
         dns_servers: 127.0.0.1
       customization:
-        hostname: "aace002"
+        hostname: "aace003"
         dns_servers:
         - 127.0.0.1
         - 1.1.1.1
