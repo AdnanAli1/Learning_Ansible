@@ -11,9 +11,9 @@
   tasks:
   - name: Clone the template
     vmware_guest:
-      hostname: "10.15.50.57"
-      username: "root"
-      password: "glglgl.123"
+      hostname: "{{ vcenter_server }}"
+      username: "{{ vcenter_user }}"
+      password: "{{ vcenter_pass }}"
       validate_certs: False
       name: aace002
       template: slce7-tmpl
