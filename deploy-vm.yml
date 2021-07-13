@@ -11,7 +11,7 @@
   tasks:
   - name: Clone the template
     vmware_guest:
-      hostname: "10.15.50.40"
+      hostname: "10.15.50.57"
       username: "root"
       password: "glglgl.123"
       validate_certs: False
