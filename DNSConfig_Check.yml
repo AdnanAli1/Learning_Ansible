@@ -1,6 +1,8 @@
 ---
 - hosts: localhost
   gather_facts: no
+  become: true
+  become_user: root
   vars:
     #ansible_python_interpreter: /usr/bin/python3.6
     vcenter_server: "10.15.50.81"
@@ -18,5 +20,7 @@
       username: '{{ vcenter_user }}'
       password: '{{ vcenter_pass }}'
       cluster_name: "Test Cluster"
+      register: dns_info
+  - debug: msg="{{ dns_info.stdout }}"
       #esxi_hostname: "10.15.50.40"
     delegate_to: localhost
